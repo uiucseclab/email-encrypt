@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".submit").click(function () {
+          $.ajax({
+            type: "POST",
+            url: "/register",
+            data: {
+              email: $(".email").val(),
+              password: $(".password").val(),
+            },
+            success: function (data) {
+              if (data.result) {
+                $(".result").text("Registration successful!");
+              } else {
+                $(".result").text("Registration uncessful, user already exists!");
+              }
+            }
+          });
+        });
+      })
+    </script>
+  </head>
+  <body>
+    <input type="text" class="email" placeholder="email"></input>
+    <input type="text" class="password" placeholder="password"></input>
+    <input type="submit" class="submit" value="Register"></input>
+    <div class="result"></div>
+  </body>
+</html>

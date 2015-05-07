@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendMessageViewController">
+            <connections>
+                <outlet property="emailField" destination="zzO-96-hNA" id="fPq-rm-ngg"/>
+                <outlet property="messageField" destination="849-5R-DVX" id="OKz-Cn-Doc"/>
+                <outlet property="sendButton" destination="p6T-Hl-vLk" id="0dg-gs-sgb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="849-5R-DVX">
+                    <rect key="frame" x="30" y="160" width="540" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6T-Hl-vLk">
+                    <rect key="frame" x="282" y="210" width="36" height="30"/>
+                    <state key="normal" title="Send">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sendPressed:" destination="-1" eventType="touchUpInside" id="FdX-ha-8vf"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Emails" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zzO-96-hNA">
+                    <rect key="frame" x="30" y="100" width="540" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="zzO-96-hNA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="NY0-kf-WrW"/>
+                <constraint firstItem="zzO-96-hNA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="NkD-L5-fhB"/>
+                <constraint firstItem="849-5R-DVX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="OQ2-Ux-TOF"/>
+                <constraint firstAttribute="trailing" secondItem="zzO-96-hNA" secondAttribute="trailing" constant="30" id="avL-De-0Nj"/>
+                <constraint firstItem="p6T-Hl-vLk" firstAttribute="top" secondItem="849-5R-DVX" secondAttribute="bottom" constant="20" id="fhy-Ea-Tf0"/>
+                <constraint firstAttribute="trailing" secondItem="849-5R-DVX" secondAttribute="trailing" constant="30" id="i8Y-F3-mzg"/>
+                <constraint firstAttribute="centerX" secondItem="p6T-Hl-vLk" secondAttribute="centerX" id="kek-15-KVg"/>
+                <constraint firstItem="849-5R-DVX" firstAttribute="top" secondItem="zzO-96-hNA" secondAttribute="bottom" constant="30" id="tUU-2J-L7l"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+        </view>
+    </objects>
+</document>
